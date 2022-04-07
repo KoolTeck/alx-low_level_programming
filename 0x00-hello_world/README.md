@@ -1,7 +1,8 @@
-#0-hello world
-S
+# 0-hello world
+
 Solutions to
- -Preprocessor task
- -compiler task
- -assembly task and
- -linking task
+
+ - Preprocessor task
+ - compiler task
+ - assembly task and
+ - linking task
