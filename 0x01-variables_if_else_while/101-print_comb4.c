@@ -34,6 +34,6 @@ y++;
 }
 x++;
 }
-putchar("\n")
+putchar(10);
 return (0);
 }
