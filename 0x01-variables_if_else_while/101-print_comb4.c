@@ -15,9 +15,9 @@ z = 48;
 while (x < 58)
 {
 y = x + 1;
-z = y + 1;
 while (y < 58)
 {
+z = y + 1;
 while (z < 58)
 {
 putchar(x);
