@@ -26,7 +26,7 @@ putchar(z);
 if (x < 55 || y < 56 || z < 57)
 {
 putchar(44);
-putchar(20);
+putchar(32);
 }
 z++;
 }
