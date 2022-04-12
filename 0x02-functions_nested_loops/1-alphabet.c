@@ -1,17 +1,10 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_alphabet - loop through char in ascii and prints alpas in lower case to stdout.
  *
- * Return: Always 0.
- *
- * print_alphabet - loop through char in ascii.
+ * Return: Always  void.
  */
-int main(void)
-{
-print_alphabet();
-return (0);
-}
 void print_alphabet(void)
 {
 char a;
