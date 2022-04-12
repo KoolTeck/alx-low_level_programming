@@ -19,3 +19,9 @@ void print_alphabet(void);
  * prints lowercase alpha 10 times
  */
 void print_alphabet_x10(void);
+
+/**
+ * returns 1 for true and 0 otherwise
+ */
+
+int _islower(int c);
