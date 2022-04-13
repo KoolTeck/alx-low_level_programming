@@ -34,3 +34,5 @@ int print_sign(int n);
  * returns + or - for true and 0 otherwise
  */
 int _abs(int num);
+
+int print_last_digit(int num);
