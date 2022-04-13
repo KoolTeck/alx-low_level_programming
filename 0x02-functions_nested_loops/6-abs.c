@@ -1,24 +1,26 @@
 #include "main.h"
 
 /**
- * _abs - checks the the absolute value of a num.
- * @n The character to check
+ * _abs - checks the absolute value of a num.
+ * @num: The num to check
  *
  * Return: On success the num.
  * On neg num, positive n is returned.
  */
-int _abs(int n)
+int _abs(int num)
 {
-if (n > 0)
+int abs;
+if (num > 0)
 {
-return (n);
+abs = num;
 }
-else if (n < 0)
+else if (num < 0)
 {
-return ((n) * (-1));
+abs = (num * -1);
 }
 else
 {
-return (0);
+abs = 0;
 }
+return (abs);
 }
