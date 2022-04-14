@@ -23,4 +23,5 @@ if (n != 98)
 printf(", ");
 n--;
 }
+printf("\n");
 }
