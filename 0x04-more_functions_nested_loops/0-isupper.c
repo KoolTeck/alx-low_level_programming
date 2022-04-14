@@ -8,12 +8,9 @@
  */
 int _isupper(int c)
 {
-for (int i = 65; i < 91; i++)
-{
-if (c == i)
+if (c >= 'A' && c <= 'Z')
 {
 return (1);
 }
 return (0);
-}
 }
