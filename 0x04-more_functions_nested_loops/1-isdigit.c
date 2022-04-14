@@ -8,12 +8,9 @@
  */
 int _isdigit(int c)
 {
-for (int i = 48; i < 58; i++)
-{
-if (i == c)
+if (c >= '0' && c <= '9')
 {
 return (1);
 }
 return (0);
-}
 }
