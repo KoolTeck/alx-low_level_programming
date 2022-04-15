@@ -7,16 +7,16 @@
  */
 void more_numbers(void)
 {
-int row = 0;
-int col;
-int limit = '9';
-int repeat;
+int row, col, limit, repeat;
+row = 0;
+col = '0';
+limit = '9';
+repeat = 0;
 while (row <= 10)
 {
-repeat = 0;
 while (repeat < 2)
 {
-for (col = '0'; col <= limit; col++)
+for (; col <= limit; col++)
 {
 if (limit == '4')
 _putchar('1');
@@ -24,9 +24,12 @@ _putchar(col);
 }
 repeat++;
 limit = '4';
+col = '0';
 }
 _putchar('\n');
 row++;
 limit = '9';
+repeat = 0;
+col = '0';
 }
 }
