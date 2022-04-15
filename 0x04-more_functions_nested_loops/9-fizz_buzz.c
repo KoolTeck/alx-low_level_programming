@@ -20,7 +20,14 @@ continue;
 }
 else if (count % 5 == 0)
 {
+if (count == 100)
+{
+printf("Buzz");
+}
+else
+{
 printf("Buzz ");
+}
 continue;
 }
 else if (count % 3 == 0)
@@ -30,5 +37,7 @@ continue;
 }
 printf("%d ", count);
 }
+printf("\n");
+
 return (0);
 }
