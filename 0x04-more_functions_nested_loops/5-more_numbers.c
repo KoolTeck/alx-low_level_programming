@@ -12,7 +12,6 @@ int row, col, repeat, limit;
 row = 0;
 col = '0';
 limit = '9';
- 
 while (row < 10)
 {
 repeat = 0;
