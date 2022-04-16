@@ -23,15 +23,15 @@ else if (c > a && c > b)
 {
 largest = c;
 }
-else if (a == b && (a > c) || (b > c))
+else if ((a == b) && (a > c || b > c))
 {
 largest = a;
 }
-else if (a == c && (a > b) || (c > b))
+else if ((a == c) && (a > b || c > b))
 {
 largest = c;
 }
-else if (b == c && (b > a) || (c > a))
+else if ((b == c) && (b > a || c > a))
 {
 largest = b;
 }
