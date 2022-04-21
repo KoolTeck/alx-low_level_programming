@@ -14,7 +14,7 @@ int len;
 int i = 0;
 if (s[i] != 0)
 {
-while (i < s[i])
+while (s[i] != 0)
 {
 len = i;
 i++;
@@ -27,4 +27,5 @@ len = 0;
 
 return (len);
 }
+_putchar('\n')
 }
