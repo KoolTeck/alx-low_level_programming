@@ -9,13 +9,20 @@
  */
 void puts2(char *str)
 {
-int i = 0;
+int i = 0, len, j;
+j = 0;
+
 if (str[i] != 0)
 {
 while (str[i] != 0)
 {
-_putchar(str[i]);
-i += 2;
+len = i;
+i++;
+}
+while (j < len)
+{
+_putchar(str[j]);
+j += 2;
 }
 _putchar('\n');
 }
