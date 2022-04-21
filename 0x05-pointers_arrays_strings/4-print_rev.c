@@ -15,7 +15,7 @@ if (s[0] != 0)
 {
 while (s[i] != 0)
 {
-lens = i;
+len = i;
 i++;
 }
 for (int  j = 0; len + 1 > j; len--)
