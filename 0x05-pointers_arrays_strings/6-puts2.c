@@ -19,7 +19,7 @@ while (str[i] != 0)
 len = i;
 i++;
 }
-while (j < len)
+while (j < len + 1)
 {
 _putchar(str[j]);
 j += 2;
