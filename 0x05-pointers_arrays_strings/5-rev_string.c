@@ -14,7 +14,9 @@ int i, j, k, tmp;
 
 i = 0;
 k = 0;
-while (k < s[k])
+if (s[i] != 0)
+{
+while (s[k] != 0)
 {
 len = k;
 k++;
@@ -27,5 +29,11 @@ s[i] = s[j];
 s[j] = tmp;
 i++;
 j--;
+}
+_putchar('\n');
+}
+else
+{
+_putchar('\n');
 }
 }
