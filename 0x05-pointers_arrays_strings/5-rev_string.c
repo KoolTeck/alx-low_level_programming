@@ -30,10 +30,9 @@ s[j] = tmp;
 i++;
 j--;
 }
-_putchar('\n');
 }
 else
 {
-_putchar('\n');
+s[i] = s[i];
 }
 }
