@@ -18,7 +18,7 @@ while (str[i] != 0)
 len = i;
 i++;
 }
-write(1, str, len);
+write(1, str, len + 1);
 write(1, "\n", 1);
 }
 else
