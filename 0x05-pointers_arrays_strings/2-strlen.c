@@ -11,10 +11,20 @@
 int _strlen(char *s)
 {
 int len;
-for (int i = 0; i < s[i]; i++)
+int i = 0;
+if (s != "")
+{
+while (i < s[i])
 {
 len = i;
+i++;
 }
-
 return (len + 1);
+}
+else
+{
+len = 0;
+
+return (len);
+}
 }
