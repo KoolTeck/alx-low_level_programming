@@ -27,5 +27,5 @@ len = 0;
 
 return (len);
 }
-_putchar('\n')
+_putchar('\n');
 }
