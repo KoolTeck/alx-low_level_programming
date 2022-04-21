@@ -9,7 +9,7 @@
  */
 void puts_half(char *str)
 {
-int i, j, k, len, n;
+int i, len, n;
 
 i = 0;
 j = 0;
@@ -21,7 +21,6 @@ while (str[i] != 0)
 len = i;
 i++;
 }
-printf("%d\n", len);
 len++;
 if (len % 2 == 0)
 {
