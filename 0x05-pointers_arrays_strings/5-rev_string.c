@@ -30,7 +30,7 @@ s[j] = tmp;
 i++;
 j--;
 }
-putchar('\n');
+_putchar('\n');
 }
 else
 {
