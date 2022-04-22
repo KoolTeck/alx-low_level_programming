@@ -12,6 +12,8 @@ void print_array(int *a, int n)
 {
 int i = 0, tmp;
 tmp = *&a[n - 1];
+if (n != i)
+{
 while (i < n)
 {
 printf("%d", *&a[i]);
@@ -22,4 +24,9 @@ printf(", ");
 i++;
 }
 _putchar('\n');
+}
+else
+{
+_putchar('\n');
+}
 }
