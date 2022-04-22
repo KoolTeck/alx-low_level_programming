@@ -26,9 +26,5 @@ dest[j] = src[j];
 j++;
 }
 }
-else
-{
-src[0] = 0;
-}
 return (dest);
 }
