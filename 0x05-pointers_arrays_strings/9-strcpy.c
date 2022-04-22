@@ -28,7 +28,7 @@ j++;
 }
 else
 {
-src[i] = 0;
+src[0] = 0;
 }
 return (dest);
 }
