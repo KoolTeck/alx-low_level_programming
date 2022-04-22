@@ -25,10 +25,10 @@ while (j < len)
 dest[j] = src[j];
 j++;
 }
-return (dest);
 }
 else
 {
 _putchar('\n');
 }
+return (dest);
 }
