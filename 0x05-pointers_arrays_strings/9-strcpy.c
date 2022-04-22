@@ -20,7 +20,7 @@ len = i;
 i++;
 }
 len++;
-while (j < len)
+while (j < len + 1)
 {
 dest[j] = src[j];
 j++;
@@ -28,7 +28,7 @@ j++;
 }
 else
 {
-_putchar('\n');
+src[i] = src[i];
 }
 return (dest);
 }
