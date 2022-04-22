@@ -27,4 +27,8 @@ j++;
 }
 return (dest);
 }
+else
+{
+_putchar('\n');
+}
 }
