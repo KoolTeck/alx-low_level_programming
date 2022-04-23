@@ -14,7 +14,7 @@ int i, j, len;
 
 i = 0;
 j = 0;
-if (src[i] != 0)
+if (dest[i] != 0 && src[i] != 0)
 {
 while (dest[i] != 0)
 {
