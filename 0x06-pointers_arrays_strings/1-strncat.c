@@ -25,6 +25,7 @@ len++;
 while (j < n && src[j] != '\0')
 {
 dest[len + j] = src[j];
+dest[len + 1] = '\0';
 j++;
 }
 }
