@@ -16,7 +16,7 @@ int i;
 i = 0;
 if (dest[i] != 0 && src[i] != 0)
 {
-for (; i < n; i++)
+for (; i < n && dest[i] != 0; i++)
 {
 dest[i] = src[i];
 }
