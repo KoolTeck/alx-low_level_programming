@@ -3,9 +3,9 @@
 /**
  * _strncat - concats two strings
  *
- *@dest: pointer to the fisrt str.
- *@src: pointer to the second str.
- *@n: number of byte to add.
+ * @dest: pointer to the fisrt str.
+ * @src: pointer to the second str.
+ * @n: number of byte to add.
  *
  * Return: a pointer to the resulting string dest
  */
