@@ -5,6 +5,7 @@
  *
  *@dest: pointer to the fisrt str.
  *@src: pointer to the second str.
+ *@n: number of byte to add.
  *
  * Return: a pointer to the resulting string dest
  */
@@ -28,7 +29,6 @@ dest[len + j] = src[j];
 j++;
 }
 }
-dest[len + 1] = '\0';
 
 return (dest);
 }
