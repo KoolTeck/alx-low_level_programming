@@ -14,29 +14,15 @@ int i, result;
 i = 0;
 if (s1[i] != 0 && s2[i != 0])
 {
-while (s1[i] != '\0' && s2[i] != '\0')
+while (*s1 == *s2)
 {
-if (s1[i] > s2[i])
+if (*s1 == '\0')
 {
-result = 15;
-break;
+return (0);
 }
-if (s1[i] < s2[i])
-{
-result = -15;
-break;
-}
-if (s1[i] == s2[i])
-{
-result = 0;
-break;
-}
-i++;
+s1++;
+s2++;
 }
 }
-else
-{
-result = s1[i] || s2[i];
-}
-return (result);
+return (*s1 - *s2);
 }
