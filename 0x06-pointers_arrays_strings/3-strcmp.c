@@ -10,34 +10,27 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-int len1, len2, result;
-
-len1 = 0;
-len2 = 0;
-if (s1[len1] != 0 && s2[len2] != 0)
+int i, result;
+i = 0;
+while (s1[i] != '\0' && s2[i] != '\0')
 {
-while (s1[len1] != 0)
-{
-len1++;
-}
-len1++;
-while (s2[len2] != 0)
-{
-len2++;
-}
-len2++;
-if (len1 < len2)
-{
-result = -15;
-}
-else if (len1 > len2)
+if (s1[i] > s2[i])
 {
 result = 15;
+break;
 }
-else
+if (s1[i] < s2[i])
+{
+result = -15;
+break;
+}
+if (s1[i] == s2[i])
 {
 result = 0;
+break;
 }
+printf("%c %c\n", s1[i], s2[i]);
+i++;
 }
 return (result);
 }
