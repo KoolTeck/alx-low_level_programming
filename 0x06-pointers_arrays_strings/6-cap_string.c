@@ -22,6 +22,7 @@ if (s[i] >= 'a' && s[i] <= 'z')
 s[i] = s[i] - 32;
 continue;
 }
+}
 for (j = 0; sep[j] != '\0'; j++)
 {
 if (s[i] == sep[j])
