@@ -10,10 +10,10 @@
  */
 char *rot13(char *s)
 {
-char i, j;
+int i, j;
 
-char rot1[26] = "ABCDEFGHIJKLMabcdefghijkm";
-char rot2[26] = "NOPQRSTUVWXYZnopqrstuvwxyz";
+char rot1[] = "ABCDEFGHIJKLMabcdefghijkm";
+char rot2[] = "NOPQRSTUVWXYZnopqrstuvwxyz";
 
 for (i = 0; s[i] != '\0'; i++)
 {
