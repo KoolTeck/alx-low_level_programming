@@ -20,15 +20,7 @@ if (*(accept + j) ==  s[i])
 {
 return (s + i);
 }
-if (s[i] == '\0')
-{
-return (s + i);
 }
-}
-}
-if (accept[i] == '\0')
-{
-return (s + i);
 }
 return (NULL);
-
+}
