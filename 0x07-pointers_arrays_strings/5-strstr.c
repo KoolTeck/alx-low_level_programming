@@ -29,7 +29,7 @@ return (haystack + track);
 }
 }
 }
-if (*(needle + i) == '\0')
+if (needle[i] == '\0')
 {
 return (needle + i);
 }
