@@ -1,4 +1,5 @@
 #include "main.h"
+#define NULL 0
 
 /**
  * _strstr - locates a substring
@@ -29,5 +30,5 @@ return (haystack + track);
 }
 }
 }
-return (0);
+return (NULL);
 }
