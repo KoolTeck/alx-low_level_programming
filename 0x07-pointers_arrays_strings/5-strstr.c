@@ -32,5 +32,9 @@ return (haystack + track);
 }
 }
 }
+if (needle == '\0')
+{
+return (needle + i);
+}
 return (NULL);
 }
