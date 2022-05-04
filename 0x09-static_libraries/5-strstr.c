@@ -29,5 +29,5 @@ return (haystack + track);
 }
 }
 }
-return (NULL);
+return (0);
 }
