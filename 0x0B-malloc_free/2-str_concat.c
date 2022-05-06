@@ -49,17 +49,13 @@ char *str_concat(char *s1, char *s2)
 int len1, len2;
 char *s;
 
-if (s1 == NULL && s2 == NULL)
-{
-return ("\0");
-}
 if (s1 == NULL)
 {
-return (s2);
+s1 = "";
 }
-else if (s2 == NULL)
+if (s2 == NULL)
 {
-return (s1);
+s2 = "";
 }
 len1 = 0;
 len2 = 0;
