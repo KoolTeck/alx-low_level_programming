@@ -29,6 +29,6 @@ while (i < size)
 a[i] = c;
 i++;
 }
-a[i] = '\0';
+a[size] = '\0';
 return (a);
 }
