@@ -40,7 +40,7 @@ for (i = 0; i < ac; i++)
 s = av[i];
 len += check_len(s);
 }
-str = malloc(len + 1 * sizeof(char));
+str = malloc(len  *sizeof(char));
 if (str == NULL)
 {
 return (NULL);
