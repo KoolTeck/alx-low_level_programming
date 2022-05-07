@@ -18,15 +18,25 @@ if (width == 0 || height == 0)
 {
 return (NULL);
 }
-size = width * sizeof(int *);
+size = height * sizeof(int *);
 arr = (int **)malloc(size);
-for (i = 0; i < width; i++)
-{
-arr[i] = (int *)malloc(height * sizeof(int));
-}
 if (arr == NULL)
 {
 return (NULL);
+}
+for (i = 0; i < width; i++)
+{
+arr[i] = (int *)malloc(width * sizeof(int));
+if (arr[i] == NULL)
+{
+while (i >= 0)
+{
+free(arr[i]);
+i--;
+}
+free(arr);
+return (NULL);
+}
 }
 for (i = 0; i < width; i++)
 {
