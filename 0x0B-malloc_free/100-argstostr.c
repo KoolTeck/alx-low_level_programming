@@ -37,9 +37,9 @@ return (NULL);
 }
 for (i = 0; i < ac; i++)
 {
-len += check_len(av[i]);
+len += check_len(av[i]) + 1;
 }
-str = malloc(sizeof(char) * len);
+str = malloc(sizeof(char) * len + 1);
 if (str == NULL)
 {
 return (NULL);
@@ -55,5 +55,6 @@ k++;
 str[k] = '\n';
 k++;
 }
+str[k] = '\0';
 return (str);
 }
