@@ -39,7 +39,7 @@ for (i = 0; i < ac; i++)
 {
 len += check_len(av[i]);
 }
-str = malloc(sizeof(char) * len);
+str = malloc(len);
 if (str == NULL)
 {
 return (NULL);
