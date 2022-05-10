@@ -33,6 +33,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 unsigned int i, len1, len2, size;
 char *str;
 
+if (s1 == NULL)
+{
+s1 = "";
+}
+if (s2 == NULL)
+{
+s2 = "";
+}
 len1 = get_len(s1);
 len2 = get_len(s2);
 if (n >= len2)
