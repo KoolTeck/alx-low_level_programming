@@ -25,7 +25,8 @@ return (ptr);
 }
 if (ptr == NULL)
 {
-new_ptr = malloc(new_size);
+ptr = malloc(new_size);
+return (ptr);
 }
 if (new_size == 0 && ptr != NULL)
 {
