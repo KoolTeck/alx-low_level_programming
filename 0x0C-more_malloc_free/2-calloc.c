@@ -24,7 +24,7 @@ if (ptr == NULL)
 return (NULL);
 }
 arr = ptr;
-for (i = 0; i < nmemb; i++)
+for (i = 0; i < nmemb * size; i++)
 {
 arr[i] = 0;
 }
