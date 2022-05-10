@@ -81,13 +81,13 @@ len1 = get_len(s1);
 len2 = get_len(s2);
 if (n >= len2)
 {
-size = len1 - 3;
+size = len1;
 }
 else
 {
-size = len1 + n - 3;
+size = len1 + n;
 }
-str = malloc(size *sizeof(int));
+str = malloc(size - 3 * sizeof(int));
 if (str == NULL)
 {
 return (NULL);
