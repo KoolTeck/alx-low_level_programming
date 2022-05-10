@@ -25,7 +25,7 @@ return (NULL);
 }
 for (num = min, i = 0; num <= max && i < size; i++, num++)
 {
-arr[i] = min;
+arr[i] = num;
 }
 return (arr);
 }
