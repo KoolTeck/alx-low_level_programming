@@ -30,7 +30,7 @@ return (i);
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-int i, len1, len2, size;
+unsigned int i, len1, len2, size;
 char *str;
 
 len1 = get_len(s1);
