@@ -47,8 +47,7 @@ while (s[i] != '\0')
 {
 i++;
 }
-r
-eturn (i);
+return (i);
 }
 
 /**
@@ -88,7 +87,7 @@ else
 {
 size = len1 + n;
 }
-str = malloc(size + 1 * sizeof(int));
+str = malloc(size *sizeof(int) + 1);
 if (str == NULL)
 {
 return (NULL);
