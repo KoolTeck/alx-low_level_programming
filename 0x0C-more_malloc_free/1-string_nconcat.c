@@ -87,7 +87,7 @@ else
 {
 size = len1 + n + 1;
 }
-str = malloc(size + 1 * sizeof(int));
+str = malloc(size * sizeof(int));
 if (str == NULL)
 {
 return (NULL);
