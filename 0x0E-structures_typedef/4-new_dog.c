@@ -72,5 +72,8 @@ return (NULL);
 new_d->name = d_name;
 new_d->age = age;
 new_d->owner = d_owner;
+free(d_name);
+free(d_owner);
+free(new_d);
 return (new_d);
 }
