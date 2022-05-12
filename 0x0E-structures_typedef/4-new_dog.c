@@ -60,7 +60,7 @@ d_name = _strdup(name);
 if (d_name == NULL)
 {
 free(new_d);
-return NULL;
+return (NULL);
 }
 d_owner = _strdup(owner);
 if (d_owner == NULL)
