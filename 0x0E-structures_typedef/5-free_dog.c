@@ -11,16 +11,10 @@
  */
 void free_dog(dog_t *d)
 {
-if (d != NULL)
-{
-free(d);
-if (d->owner != NULL)
+if (d)
 {
 free(d->owner);
-}
-if (d->name != NULL)
-{
 free(d->name);
-}
+free(d);
 }
 }
