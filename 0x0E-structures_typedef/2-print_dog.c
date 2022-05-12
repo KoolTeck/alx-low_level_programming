@@ -28,6 +28,6 @@ else
 {
 printf("Name: %s\n", d->owner);
 }
-}
 printf("\n");
+}
 }
