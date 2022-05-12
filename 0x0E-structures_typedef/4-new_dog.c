@@ -22,7 +22,7 @@ while (str[len] != '\0')
 {
 len++;
 }
-s = malloc(len + 1 * sizeof(char));
+s = (char*) malloc(len * sizeof(char) + 1);
 if (s == NULL)
 {
 return (NULL);
@@ -47,10 +47,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *new_d;
 char *d_name, *d_owner;
-if (name == NULL || owner == NULL)
-{
-return (NULL);
-}
 new_d = malloc(sizeof(dog_t));
 if (new_d == NULL)
 {
@@ -65,15 +61,12 @@ return (NULL);
 d_owner = _strdup(owner);
 if (d_owner == NULL)
 {
+free(d_name);
 free(new_d);
-free(d_owner);
 return (NULL);
 }
 new_d->name = d_name;
 new_d->age = age;
 new_d->owner = d_owner;
-free(d_name);
-free(d_owner);
-free(new_d);
 return (new_d);
 }
