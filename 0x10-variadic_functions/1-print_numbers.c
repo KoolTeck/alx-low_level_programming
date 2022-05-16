@@ -22,5 +22,6 @@ if (separator)
 printf("%s", separator);
 }
 }
+va_end(args);
 printf("\n");
 }
