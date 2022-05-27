@@ -13,6 +13,8 @@ listint_t *temp, *next_node;
 temp = *head;
 next_node = *head;
 
+if (*head == NULL)
+return;
 if (temp != NULL)
 {
 while (temp != NULL)
