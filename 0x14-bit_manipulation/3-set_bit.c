@@ -95,7 +95,7 @@ return (dec_num);
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-  unsigned long int num, bin_num, temp, shift, size = 0;
+unsigned long int num, bin_num, temp, shift, size = 0;
 unsigned int i;
 int rem, sub;
 char *buf;
@@ -105,7 +105,7 @@ temp = *n;
 shift = 1;
 if (*n == 0)
 {
-*n = *n | shift << index;
+*n = temp | shift << index;
 return (1);
 }
 while (*n > 0)
