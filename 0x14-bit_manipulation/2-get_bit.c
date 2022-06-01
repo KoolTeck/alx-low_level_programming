@@ -7,7 +7,7 @@
  *
  * Return: nothing.
  */
-void rev_string(int *s)
+void rev_string(char *s)
 {
 int len;
 int i, j, k, tmp;
@@ -49,7 +49,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 unsigned long int num, i, size = 0;
 int bit, rem, sub;
-int *buf;
+char *buf;
 
 num = n;
 while (n > 0)
