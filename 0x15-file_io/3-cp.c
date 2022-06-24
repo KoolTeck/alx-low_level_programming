@@ -4,35 +4,34 @@
 #include<stdlib.h>
 
 /**
- * handle_file_from - open the file to copy from.
- * @buff: the buff to read into
- * @av:  a the args vector or args list
+ * close_error - prints error when file did not close
+ * @message: the error message
+ * @fd_val:  the fd value
+ * @exit_code: the error exit code
  *
  * Return: the lenght of file read into buff
  */
-int handle_file_from(char *buff, char **av)
+void close_error(char *message, int fd_val, int exit_code)
 {
-int close_fd1, read_count, len = 0;
-int fd1 = open(av[1], O_RDONLY);
-read_count = read(fd1, buff, 1024);
-if (fd1 < 0 || read_count < 0)
+dprintf(STDERR_FILENO, message, fd_val);
+exit(exit_code);
+}
+
+/**
+ * open_write_error - prints error when file opening or writting fails
+ * @message: the error message
+ * @file_name:  the file name argument
+ * @exit_code: the error exit code
+ *
+ * Return: the lenght of file read into buff
+ */
+void open_write_error(char *message, char *file_name, int exit_code)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-exit(98);
+dprintf(STDERR_FILENO, message, file_name);
+exit(exit_code);
 }
-buff[read_count] = '\0';
-while (buff[len] != '\0')
-{
-len++;
-}
-close_fd1 = close(fd1);
-if (close_fd1 < 0)
-{
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
-exit(100);
-}
-return (len);
-}
+
+
 /**
  * main - copies the content of a file to another file.
  * @ac: the args count
@@ -42,33 +41,32 @@ return (len);
  */
 int main(int ac, char **av)
 {
-int fd2, wc, len, close_fd2;
-char *buff;
+int fd1, fd2;
+ssize_t write_count, read_count;
+char buff[1024];
 
 if (ac != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
 }
-buff = malloc(1024 * sizeof(char));
-if (buff == NULL)
+fd1 = open(av[1], O_RDONLY);
+if (fd1 == -1)
+open_write_error("Error: Can't read from file %s\n", av[1], 98);
+fd2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+if (fd2 == -1)
+open_write_error("Error: Can't write to %s\n", av[2], 99);
+while ((read_count = read(fd1, buff, 1024)) > 0)
 {
-exit(97);
+write_count = write(fd2, buff, read_count);
+if (write_count == -1)
+open_write_error("Error: Can't write to %s\n", av[2], 99);
 }
-len = handle_file_from(buff, av);
-fd2 = open(av[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-wc = write(fd2, buff, len);
-if (fd2 < 0 || wc < 0)
-{
-dprintf(STDERR_FILENO, "Can't write to %s\n", av[2]);
-exit(99);
-}
-close_fd2 = close(fd2);
-if (close_fd2 < 0)
-{
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
-exit(100);
-}
-free(buff);
+if (read_count == -1)
+open_write_error("Error: Can't read from file %s\n", av[1], 98);
+if (close(fd1) == -1)
+close_error("Error: Can't close fd %d\n", fd1, 100);
+if (close(fd2) == -1)
+close_error("Error: Can't close fd %d\n", fd2, 100);
 return (0);
 }
