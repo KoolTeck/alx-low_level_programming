@@ -1,9 +1,10 @@
 #include "lists.h"
 
 /**
- * main - check the code
+ * free_dlistint - frees a doubly linked list
+ * @head: the head node
  *
- * Return: Always EXIT_SUCCESS.
+ * Return: nothing
  */
 void free_dlistint(dlistint_t *head)
 {
