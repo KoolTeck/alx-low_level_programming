@@ -30,8 +30,14 @@ ht->array[index] = new;
 else
 {
 current = ht->array[index];
-ht->array[index] = new;
-new->next = current;
+if (strcmp(key, current->key) == 0)
+{
+current->value = _strdup(value);
+}
+else
+{
+
+}
 }
 return (1);
 }
