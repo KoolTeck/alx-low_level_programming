@@ -14,7 +14,7 @@ hash_node_t *new;
 hash_node_t *current;
 unsigned long int index;
 
-if (key[0] == '\0' || key == NULL || ht == NULL || value == NULL)
+if (ht == NULL)
 return (0);
 new = malloc(sizeof(hash_node_t));
 if (new == NULL)
@@ -36,7 +36,8 @@ current->value = strdup(value);
 }
 else
 {
-
+ht->array[index] = new;
+new->next = current;
 }
 }
 return (1);
