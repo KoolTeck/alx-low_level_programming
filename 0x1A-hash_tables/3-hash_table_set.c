@@ -19,8 +19,8 @@ return (0);
 new = malloc(sizeof(hash_node_t));
 if (new == NULL)
 return (0);
-new->key = (char *)key;
-new->value = _strdup(value);
+new->key = strdup(key);
+new->value = strdup(value);
 new->next = NULL;
 index = key_index((unsigned char *)key, ht->size);
 if (ht->array[index] == NULL)
@@ -32,7 +32,7 @@ else
 current = ht->array[index];
 if (strcmp(key, current->key) == 0)
 {
-current->value = _strdup(value);
+current->value = strdup(value);
 }
 else
 {
