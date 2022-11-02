@@ -44,7 +44,7 @@ return (-1);
 void print_array(int *arr, int n, int start)
 {
 int i;
-printf("binary Searching in array: ");
+printf("Searching in array: ");
 i = start;
 while (i < n)
 {
