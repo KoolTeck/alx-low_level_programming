@@ -1,35 +1,28 @@
-
 #include "main.h"
-
 /**
- * *rot13 - encodes a string with rot13
- *
- * @s: a pointer to the str
- *
- * Return: A pointer to the modofied str
+ * rot13 - encodes a string using rot13
+ * @s: input string.
+ * Return: the pointer to dest.
  */
+
 char *rot13(char *s)
 {
-int i, j;
+	int count = 0, i;
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-char rot1[] = "ABCDEFGHIJKLMabcdefghijkm";
-char rot2[] = "NOPQRSTUVWXYZnopqrstuvwxyz";
+	while (*(s + count) != '\0')
+	{
+		for (i = 0; i < 52; i++)
+		{
+			if (*(s + count) == alphabet[i])
+			{
+				*(s + count) = rot13[i];
+				break;
+			}
+		}
+		count++;
+	}
 
-for (i = 0; s[i] != '\0'; i++)
-{
-j = 0;
-while (j < 26)
-{
-if (s[i] == rot1[j])
-{
-s[i] = rot2[j];
-}
-else if (s[i] == rot2[j])
-{
-s[i] = rot1[j];
-}
-j++;
-}
-}
-return (s);
+	return (s);
 }
